@@ -5,12 +5,16 @@ function JournalPage(){
 
     const TempJournalData = [
         {
-            text:"Journal entry #1"
+            text:"Journal entry #1",
+            key:"1"
         },
         {
-            text:"Journal entry #2"
+            text:"Journal entry #2",
+            key:"2"
         }
     ]
+
+    
 
     return (
         <div className="journal-page">

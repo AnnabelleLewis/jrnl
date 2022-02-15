@@ -1,10 +1,10 @@
 import react, {useState} from "react";
 
-function JournalEntry(entryData) {
-    
+function JournalEntry(props) {
+   
     return (
         <div className="journal-entry">
-            {entryData.text}
+            {String(props.text)}
         </div>
     )
 }
