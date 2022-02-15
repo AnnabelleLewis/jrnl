@@ -1,9 +1,10 @@
 import './App.css';
+import JournalPage from './Components/JournalPage/JournalPage';
 
 function App() {
   return (
     <div className="App">
-      app content here!
+      <JournalPage/>
     </div>
   );
 }
