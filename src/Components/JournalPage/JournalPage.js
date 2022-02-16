@@ -1,27 +1,25 @@
-import react from "react";
+import react,{useState} from "react";
 import JournalEntryBlock from "./JournalEntryBlock";
 import JournalEntryForum from "./JournalEntryForum";
 
 function JournalPage(){
 
-    const TempJournalData = [
-        {
-            text:"Journal entry #1",
-            key:"1"
-        },
-        {
-            text:"Journal entry #2",
-            key:"2"
-        }
-    ]
+    const [JournalEntrys, updateJournalEntrys] = useState([]);
 
+    const handleSubmit = entry => {
+        console.log(entry);
+        var newJournalEntrys = JournalEntrys.slice()
+        newJournalEntrys.push(entry)
+        updateJournalEntrys(newJournalEntrys);
+        console.log(JournalEntrys)
+    }
     
 
     return (
         <div className="journal-page">
             Journal page content here!
-            <JournalEntryBlock entrys={TempJournalData}/>
-            <JournalEntryForum/>
+            <JournalEntryBlock entrys={JournalEntrys}/>
+            <JournalEntryForum onSubmit={handleSubmit}/>
         </div>
     )
 }
