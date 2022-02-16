@@ -1,5 +1,6 @@
 import react from "react";
 import JournalEntryBlock from "./JournalEntryBlock";
+import JournalEntryForum from "./JournalEntryForum";
 
 function JournalPage(){
 
@@ -20,6 +21,7 @@ function JournalPage(){
         <div className="journal-page">
             Journal page content here!
             <JournalEntryBlock entrys={TempJournalData}/>
+            <JournalEntryForum/>
         </div>
     )
 }
