@@ -8,7 +8,13 @@ function JournalEntryBlock (props) {
     return (
         <div className="journal-entry-block">
             {props.entrys.map(entry => (
-                <JournalEntry key={entry.key} text={entry.text} entryType={entry.entryType}/>
+                <JournalEntry 
+                    key={entry.key} 
+                    text={entry.text} 
+                    entryKey={entry.key} 
+                    entryType={entry.entryType} 
+                    onDelete={props.deleteEntry}
+                />
             ))}
         </div>
     );
