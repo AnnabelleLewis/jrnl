@@ -9,6 +9,7 @@ function JournalEntryForum(props){
         entry.preventDefault();
         var entryData = {
             text:inputText,
+            entryType:"note",
             key:Date.now()
         }
         
